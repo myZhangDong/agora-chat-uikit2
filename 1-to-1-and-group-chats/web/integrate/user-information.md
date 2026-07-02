@@ -13,7 +13,7 @@ ReactDOM.createRoot(document.getElementById('root') as Element).render(
   <div>
     <UIKitProvider
       initConfig={{
-        appKey: 'your app key',
+        appId: 'your appId', // Supported starting from version 2.1.0, please use appKey for previous versions
         userId: 'userId',
         token: 'token',
         translationTargetLanguage: 'es', // Translation target language
@@ -169,7 +169,7 @@ useEffect(() => {
 
 | Property         | Type                            | Description                                                                                                                                                                                                            |
 |------------------|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `initConfig`     | ProviderProps['initConfig']     | Initialization parameters, such as setting `appKey`, `userId`, `token`, whether to use user attributes, and the target language for translation.                                                                                  |
+| `initConfig`     | ProviderProps['initConfig']     | Initialization parameters, such as setting `appId`, `userId`, `token`, whether to use user attributes, and the target language for translation.                                                                                  |
 | `local`          | ProviderProps['local']          | Internationalization configuration parameters, you can configure i18next parameters during initialization.                                                                                                             |
 | `features`       | ProviderProps['features']       | Configure the features you need globally. UIKit displays all features by default. If the required features are also configured in the corresponding component, the configuration in the component takes precedence. |
 | `reactionConfig` | ProviderProps['reactionConfig'] | Globally configure the emojis for the message emoji reply feature. If this parameter is also set in the message component, the setting in the message component will have higher priority.                                         |

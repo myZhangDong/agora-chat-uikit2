@@ -133,6 +133,23 @@ Take the following steps to implement the project:
                 <ChatApp />
               </UIKitProvider>
             );
+                }}>
+                  <Chat />
+                </div>
+              </div>
+            );
+          };
+    
+          class App extends Component {
+            render() {
+              return (
+                <Provider
+                  initConfig={{
+                    appId: "your appId", // Supported starting from version 2.1.0, please use appKey for previous versions
+                  }}
+          >
+                  <ChatApp />
+                </Provider>
           }
         }
 

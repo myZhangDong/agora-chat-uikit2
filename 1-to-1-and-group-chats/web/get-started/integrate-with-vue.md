@@ -121,7 +121,7 @@ Take the following steps:
        // Introduce UIKit styles
        import 'agora-chat-uikit/style.css'
        
-       const appKey = "your appkey";
+       const appId = "your appId"; // Your appId. Supported starting from version 2.1.0, please use appKey for previous versions
        const userId = "userId";
        const token = "token";
        
@@ -131,7 +131,7 @@ Take the following steps:
          return (
            <UIKitProvider
              initConfig={{
-               appKey,
+               appId,
                userId,
                token
              }}

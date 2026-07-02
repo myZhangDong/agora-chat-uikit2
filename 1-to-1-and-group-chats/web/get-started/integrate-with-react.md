@@ -53,7 +53,7 @@ Take the following steps:
       <div>
         <UIKitProvider
           initConfig={{
-            appKey: 'your app key', // Your app key
+            appId: 'your appId', // Your appId. Supported starting from version 2.1.0, please use appKey for previous versions
             userId: 'user ID', // User ID
             token: 'token', // User token
           }}
