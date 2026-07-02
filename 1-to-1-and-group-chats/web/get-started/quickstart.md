@@ -83,10 +83,10 @@ Take the following steps to implement the project:
         } from "agora-chat-uikit";
         import "agora-chat-uikit/style.css";
 
-        // Attention: Before using UIKit, please set the userId, AccessToken and appKey first.
+        // Attention: Before using UIKit, please set the userId, AccessToken and appId first.
         const userId = "userId";
         const accessToken = "accessToken";
-        const appKey = "your appKey";
+        const appId = "your appId"; // Supported starting from version 2.1.0, please use appKey for previous versions
 
         const ChatApp = () => {
           const client = useClient();
@@ -127,32 +127,14 @@ Take the following steps to implement the project:
             return (
               <UIKitProvider
                 initConfig={{
-                  appKey: appKey,
+                  appId,
                 }}
               >
                 <ChatApp />
               </UIKitProvider>
             );
-                }}>
-                  <Chat />
-                </div>
-              </div>
-            );
           };
-    
-          class App extends Component {
-            render() {
-              return (
-                <Provider
-                  initConfig={{
-                    appId: "your appId", // Supported starting from version 2.1.0, please use appKey for previous versions
-                  }}
-          >
-                  <ChatApp />
-                </Provider>
-          }
         }
-
         export default App;
 
        ```
